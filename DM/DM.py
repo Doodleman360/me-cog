@@ -17,21 +17,15 @@ class DM:
     
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
-    async def dmSet(self, ctx, choice : str=None):
-        """Sets whether or not to delete the comand when it is typed
-            
-            Options:
-            off - turns off deleting
-            on - turns on deleting"""
-        options = {"off": False, "on": True}
+    async def toggle(self, ctx):
+        """Turns on/off auto delete"""
         server = ctx.message.server
-        if choice.lower() not in options:
-            await send_cmd_help(ctx)
-            return
+        self.settings[server.id]["AUTODEL"] = not self.settings[server.id]["AUTODEL"]
+        if self.settings[server.id]["AUTODEL"]:
+            await self.bot.say("I will now auto delete.")
         else:
-            self.settings[server.id]["AUTODEL"] = options[choice.lower()]
-            fileIO("data/welcome/settings.json", "save", self.settings)
-    
+            await self.bot.say("I will no longer auto delete.")
+        fileIO("data/DM/settings.json", "save", self.settings)
 
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
@@ -43,7 +37,7 @@ class DM:
 
 def check_folders():
     if not os.path.exists("data/DM"):
-        print("Creating data/welcome folder...")
+        print("Creating data/DM folder...")
         os.makedirs("data/DM")
 
 def check_files():
