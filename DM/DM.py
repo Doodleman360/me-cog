@@ -10,9 +10,11 @@ class DM:
 
     @commands.command()
     @checks.admin_or_permissions(manage_server=True)
-    async def DM(self, user : discord.Member, format_msg):
+    async def dm(self, ctx, user : discord.Member, format_msg):
         """DM a user."""
+        channel = ctx.message.channel
         await self.bot.send_message(user, format_msg)
+        await self.bot.purge_from(channel, 1)
 
 def setup(bot):
     bot.add_cog(DM(bot))
