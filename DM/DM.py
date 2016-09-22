@@ -17,7 +17,7 @@ class DM:
     
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
-    async def toggle(self, ctx):
+    async def dmToggle(self, ctx):
         """Turns on/off auto delete"""
         server = ctx.message.server
         self.settings[server.id]["AUTODEL"] = not self.settings[server.id]["AUTODEL"]
