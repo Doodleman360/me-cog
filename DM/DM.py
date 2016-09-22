@@ -12,7 +12,6 @@ class DM:
     @checks.admin_or_permissions(manage_server=True)
     async def DM(self, user : discord.Member, format_msg):
         """DM a user."""
-        await self.bot.say(format_msg)
         await self.bot.send_message(user, format_msg)
 
 def setup(bot):
