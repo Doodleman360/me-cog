@@ -61,6 +61,7 @@ def check_files():
 
 
 def setup(bot):
-    bot.add_cog(DM(bot))
     check_folders()
     check_files()
+    bot.add_cog(DM(bot))
+
