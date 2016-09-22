@@ -13,7 +13,7 @@ class DM:
     async def DM(self, user : discord.Member, format_msg):
         """DM a user."""
         await self.bot.say(format_msg)
-        await self.bot.send_message(member, format_msg)
+        await self.bot.send_message(user, format_msg)
 
 def setup(bot):
     bot.add_cog(DM(bot))
