@@ -14,7 +14,7 @@ class DM:
         """DM a user."""
         channel = ctx.message.channel
         await self.bot.send_message(user, format_msg)
-        await self.bot.purge_from(channel, 1)
+        await self.bot.purge_from(channel, limit=1)
 
 def setup(bot):
     bot.add_cog(DM(bot))
