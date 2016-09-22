@@ -8,7 +8,7 @@ class DM:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
     async def dm(self, ctx, user : discord.Member, format_msg):
         """DM a user."""
