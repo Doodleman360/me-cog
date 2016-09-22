@@ -15,7 +15,7 @@ class DM:
     
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
-    async def dmSet(self, ctx, choice : str=None);
+    async def dmSet(self, ctx, choice : str=None):
         """Sets whether or not to delete the comand when it is typed
             
             Options:
