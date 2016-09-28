@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from .utils import checks
+import chatterbot
 from chatterbot import ChatBot
 
 class chatter:
