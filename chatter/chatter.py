@@ -1,4 +1,4 @@
-from Chatterbot import ChatBot
+from chatterbot import ChatBot
 import discord
 from discord.ext import commands
 from .utils import checks
