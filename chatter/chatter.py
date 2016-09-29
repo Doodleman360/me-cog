@@ -5,9 +5,6 @@ from .utils import checks
 
 class chatter:
     """chatter with a user."""
-    
-    chatbot = ChatBot('Ron Obvious', trainer='chatterbot.trainers.ChatterBotCorpusTrainer')
-    chatbot.train("chatterbot.corpus.english")
 
     def __init__(self, bot):
         self.bot = bot
@@ -15,6 +12,8 @@ class chatter:
     @commands.command(pass_context=True)
     async def chat(self, format_msg):
         """chat"""
+        chatbot = ChatBot('Ron Obvious', trainer='chatterbot.trainers.ChatterBotCorpusTrainer')
+        chatbot.train("chatterbot.corpus.english")
         await self.bot.say(chatbot.get_response(format_msg))
 
 def setup(bot):
