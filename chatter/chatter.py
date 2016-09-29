@@ -17,5 +17,5 @@ class chatter:
         await self.bot.say(chatbot.get_response(format_msg))
 
 def setup(bot):
-    bot.add_cog(DM(bot))
+    bot.add_cog(chatter(bot))
 
