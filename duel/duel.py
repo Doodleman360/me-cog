@@ -61,6 +61,9 @@ WEAPONS = {
     'stab': {
         'naginata': 5,
         'lance': 4
+    },
+    'flail': {
+        'mop': 1
     }
 }
 
