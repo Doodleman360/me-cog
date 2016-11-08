@@ -458,7 +458,7 @@ class Duel:
                     else:
                         msg = self.generate_action(attacker, defender)
                     await self.bot.say(msg)
-                    await asyncio.sleep(5)
+                    await asyncio.sleep(2)
 
             if p1.hp != p2.hp:
                 victor = p1 if p1.hp > p2.hp else p2
