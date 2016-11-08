@@ -14,7 +14,7 @@ from .utils.chat_formatting import pagify
 from .utils import checks
 
 # Constants
-MAX_ROUNDS = 4
+MAX_ROUNDS = 10
 INITIAL_HP = 20
 TARGET_SELF = 'self'
 TARGET_OTHER = 'target'
@@ -458,7 +458,7 @@ class Duel:
                     else:
                         msg = self.generate_action(attacker, defender)
                     await self.bot.say(msg)
-                    await asyncio.sleep(1)
+                    await asyncio.sleep(5)
 
             if p1.hp != p2.hp:
                 victor = p1 if p1.hp > p2.hp else p2
