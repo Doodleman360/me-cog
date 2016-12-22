@@ -1,8 +1,0 @@
-{
-    "AUTHOR" : "Doodleman",
-    "SHORT" : “chatterbot”,
-    "DESCRIPTION" : "Allow chatterboting with users",
-    "DISABLED" : false,
-    "NAME" : “chatter”,
-    "INSTALL_MSG" : “`[p]chat` for more info."
-}
