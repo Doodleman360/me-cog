@@ -18,15 +18,16 @@ class rnsfw:
             await send_cmd_help(ctx)
 
     @rnsfw.command(no_pm=True)
-    async def yandere(self):
+    async def yandere(self, i):
         """Random Image From Yandere"""
         try:
-            query = ("https://yande.re/post/random")
-            page = await aiohttp.get(query)
-            page = await page.text()
-            soup = BeautifulSoup(page, 'html.parser')
-            image = soup.find(id="highres").get("href")
-            await self.bot.say(image)
+            for num in range(1,i):
+                query = ("https://yande.re/post/random")
+                page = await aiohttp.get(query)
+                page = await page.text()
+                soup = BeautifulSoup(page, 'html.parser')
+                image = soup.find(id="highres").get("href")
+                await self.bot.say(image)
         except Exception as e:
             await self.bot.say(":x: **Error:** `{}`".format(e))
 
