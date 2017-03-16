@@ -20,8 +20,10 @@ class rnsfw:
     @rnsfw.command(no_pm=True)
     async def yandere(self, i):
         """Random Image From Yandere"""
+        if i > 11:
+            i = 10
         try:
-            for num in range(1,int(i)):
+            for num in range(0,int(i)):
                 query = ("https://yande.re/post/random")
                 page = await aiohttp.get(query)
                 page = await page.text()
