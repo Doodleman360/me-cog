@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands
-from .utils import checks
+from __main__ import send_cmd_help
+import aiohttp
+from bs4 import BeautifulSoup
+import random
 
 class rnsfw:
     """repetes nsfw."""
