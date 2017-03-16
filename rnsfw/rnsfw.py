@@ -18,12 +18,13 @@ class rnsfw:
             await send_cmd_help(ctx)
 
     @rnsfw.command(no_pm=True)
-    async def yandere(self, int(i)):
+    async def yandere(self, i):
         """Random Image From Yandere"""
-        if int(i) > 11:
-            i = 10
+        num = int(i)
+        if num > 11:
+            num = 10
         try:
-            for num in range(0,int(i)):
+            for rand in range(0,num):
                 query = ("https://yande.re/post/random")
                 page = await aiohttp.get(query)
                 page = await page.text()
