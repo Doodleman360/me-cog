@@ -18,9 +18,9 @@ class rnsfw:
             await send_cmd_help(ctx)
 
     @rnsfw.command(no_pm=True)
-    async def yandere(self, i):
+    async def yandere(self, int(i)):
         """Random Image From Yandere"""
-        if i > int(11):
+        if int(i) > 11:
             i = 10
         try:
             for num in range(0,int(i)):
