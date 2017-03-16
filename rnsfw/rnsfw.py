@@ -20,7 +20,7 @@ class rnsfw:
     @rnsfw.command(no_pm=True)
     async def yandere(self, i):
         """Random Image From Yandere"""
-        if i > 11:
+        if i > int(11):
             i = 10
         try:
             for num in range(0,int(i)):
