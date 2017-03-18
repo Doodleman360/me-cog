@@ -20,7 +20,7 @@ class reddit:
         
         #r.subreddit(sub).id
         for submission in r.subreddit(format_msg).hot(limit=2):
-            await self.bot.say(submission)
+            await self.bot.say(vars(submission))
 def setup(bot):
     bot.add_cog(reddit(bot))
 
