@@ -21,7 +21,7 @@ class reddit:
         #r.subreddit(sub).id
         for submission in r.subreddit(format_msg).hot(limit=5):
             if not submission.stickied:
-                await self.bot.say(vars(submission))
+                await self.bot.say(string(vars(submission)))
 def setup(bot):
     bot.add_cog(reddit(bot))
 
