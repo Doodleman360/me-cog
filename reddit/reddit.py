@@ -19,12 +19,12 @@ class reddit:
         r = praw.Reddit(client_id='W0qqIJPsyqrKbA', client_secret='D8KHLMo62Nu8Q1wJMJRtq-FBD18', user_agent='testscript by /u/Doodleman360_')
         
         #r.subreddit(sub).id
-        for submission in r.subreddit(format_msg).new(limit=1):
-            if submission.url.startswith("https://i.imgur.com/"):
-                await self.bot.say(submission.url)
-            else:
-                await self.bot.say("ERROR: incorect format")
-                #await self.bot.say(submission.url)
+        done = False
+        while not done
+            for submission in r.subreddit(format_msg).new(limit=1):
+                if "i.imgur.com/" in submission.url:
+                    await self.bot.say(submission.url)
+                    done = True
 def setup(bot):
     bot.add_cog(reddit(bot))
 
