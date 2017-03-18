@@ -48,7 +48,7 @@ class reddit:
 
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
-    async def redditNew(self, ctx, format_msg):
+    async def redditTop(self, ctx, format_msg):
         """pulls the top post from a subreddit."""
         #r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
         #r = praw.Reddit(client_id='W0qqIJPsyqrKbA', client_secret='D8KHLMo62Nu8Q1wJMJRtq-FBD18', password='pass', user_agent='testscript by /u/fakebot3', username='Doodleman360_')
