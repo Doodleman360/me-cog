@@ -1,5 +1,4 @@
 import discord
-import prawcore
 import praw
 from discord.ext import commands
 from .utils import checks
