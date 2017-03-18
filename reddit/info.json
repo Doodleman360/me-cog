@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Doodleman",
+    "SHORT" : “reddit”,
+    "DESCRIPTION" : “pulls pics from reddit”,
+    "DISABLED" : false,
+    "NAME" : “reddit”,
+    "INSTALL_MSG" : “`[p]reddit` for more info."
+}
