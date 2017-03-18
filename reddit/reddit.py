@@ -20,11 +20,11 @@ class reddit:
         
         #r.subreddit(sub).id
         for submission in r.subreddit(format_msg).new(limit=1):
-            if submission.url.startswith("http://i.imgur.com/"):
+            if submission.url.startswith("https://i.imgur.com/"):
                 await self.bot.say(submission.url)
             else:
                 await self.bot.say("ERROR: incorect format")
-                await self.bot.say(submission.url)
+                #await self.bot.say(submission.url)
 def setup(bot):
     bot.add_cog(reddit(bot))
 
