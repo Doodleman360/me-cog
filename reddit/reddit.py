@@ -12,7 +12,7 @@ class reddit:
     
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
-    async def reddit(self, format_msg):
+    async def reddit(self, ctx, format_msg):
         """pulls a picture from reddit."""
         #r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
         #r = praw.Reddit(client_id='W0qqIJPsyqrKbA', client_secret='D8KHLMo62Nu8Q1wJMJRtq-FBD18', password='pass', user_agent='testscript by /u/fakebot3', username='Doodleman360_')
