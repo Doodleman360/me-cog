@@ -24,6 +24,7 @@ class reddit:
                 await self.bot.say(submission.url)
             else:
                 await self.bot.say("ERROR: incorect format")
+                await self.bot.say(submission.url)
 def setup(bot):
     bot.add_cog(reddit(bot))
 
