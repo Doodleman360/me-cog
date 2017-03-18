@@ -1,4 +1,7 @@
 import discord
+import Redirect
+import prawcore
+import praw
 from discord.ext import commands
 from .utils import checks
 
@@ -10,9 +13,13 @@ class reddit:
     
     @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
-    async def reddit(self):
+    async def reddit(self, sub):
         """pulls a picture from reddit."""
-        await self.bot.say("test")
+        try:
+            reddit.subreddit(sub).id
+            await self.bot.say("sub does exist")
+        except prawcore.exceptions.Redirect:
+            await self.bot.say("sub does not exist")
 
 def setup(bot):
     bot.add_cog(reddit(bot))
