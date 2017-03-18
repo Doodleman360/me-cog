@@ -1,5 +1,4 @@
 import discord
-import Redirect
 import prawcore
 import praw
 from discord.ext import commands
