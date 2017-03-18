@@ -23,7 +23,7 @@ class reddit:
                                  username='Doodleman360_')
             
             r.subreddit(sub).id
-            await self.bot.say("sub does exist")
+            await self.bot.say(r.user.me())
         except prawcore.exceptions.Redirect:
             await self.bot.say("sub does not exist")
 
