@@ -19,9 +19,8 @@ class reddit:
         r = praw.Reddit(client_id='W0qqIJPsyqrKbA', client_secret='D8KHLMo62Nu8Q1wJMJRtq-FBD18', user_agent='testscript by /u/Doodleman360_')
         
         #r.subreddit(sub).id
-        for submission in r.subreddit(format_msg).hot(limit=5):
-            if not submission.stickied:
-                await self.bot.say(string(vars(submission)))
+        for submission in r.subreddit(format_msg).new(limit=1):
+            await self.bot.say(submission.url)
 def setup(bot):
     bot.add_cog(reddit(bot))
 
