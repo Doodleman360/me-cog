@@ -15,7 +15,9 @@ class reddit:
     async def reddit(self, sub):
         """pulls a picture from reddit."""
         try:
-            reddit.subreddit(sub).id
+            r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
+
+            r.subreddit(sub).id
             await self.bot.say("sub does exist")
         except prawcore.exceptions.Redirect:
             await self.bot.say("sub does not exist")
