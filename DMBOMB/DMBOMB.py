@@ -20,5 +20,5 @@ class DMBOMB:
                 await self.bot.send_message(submission.url)
 
 def setup(bot):
-    bot.add_cog(DM(bot))
+    bot.add_cog(DMBOMB(bot))
 

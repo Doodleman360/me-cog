@@ -1,8 +1,8 @@
 {
     "AUTHOR" : "Doodleman",
-    "SHORT" : "DM!",
+    "SHORT" : "DMBOMB”,
     "DESCRIPTION" : "Allows DMing users",
     "DISABLED" : false,
-    "NAME" : "DM",
-    "INSTALL_MSG" : "`[p]DM` for more info."
+    "NAME" : "DMBOMB”,
+    "INSTALL_MSG" : "`[p]DMBOMB` for more info."
 }
