@@ -14,7 +14,7 @@ class CleanAll:
         """Cleans all messages from a channel."""
         channel = ctx.message.channel
         tmp = ctx.message
-        async for message in self.bot.logs_from(channel, limit=100,before=tmp):
+        async for message in self.bot.logs_from(channel, limit=10000000,before=tmp):
             try:
                 await self.bot.delete_message(message)
             except:
