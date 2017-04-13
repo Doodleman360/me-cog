@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Doodleman",
+    "SHORT" : "CleanAll!",
+    "DESCRIPTION" : "deletes all messages in a chanel",
+    "DISABLED" : false,
+    "NAME" : "CleanAll",
+    "INSTALL_MSG" : "`[p]CleanAll` for more info."
+}
