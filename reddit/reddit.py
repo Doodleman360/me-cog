@@ -11,7 +11,7 @@ class reddit:
         self.bot = bot
     
     @commands.command(pass_context=True)
-    @checks.admin_or_permissions(manage_server=True)
+    #@checks.admin_or_permissions(manage_server=True)
     async def randR(self):
         """pulls a random nsfw picture from reddit."""
         #r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
@@ -27,7 +27,7 @@ class reddit:
                     done = True
 
     @commands.command(pass_context=True)
-    @checks.admin_or_permissions(manage_server=True)
+    #@checks.admin_or_permissions(manage_server=True)
     async def redditNew(self, ctx, format_msg):
         """pulls a new post from reddit."""
         #r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
@@ -47,7 +47,7 @@ class reddit:
             await self.bot.say(submission.url)
 
     @commands.command(pass_context=True)
-    @checks.admin_or_permissions(manage_server=True)
+    #@checks.admin_or_permissions(manage_server=True)
     async def redditTop(self, ctx, format_msg):
         """pulls the top post from a subreddit."""
         #r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
