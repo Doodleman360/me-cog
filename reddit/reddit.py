@@ -63,9 +63,12 @@ class reddit:
         #r = praw.Reddit(user_agent="Get top wallpaper from /r/{subreddit} by /u/ssimunic".format(subreddit=sub))
         #r = praw.Reddit(client_id='W0qqIJPsyqrKbA', client_secret='D8KHLMo62Nu8Q1wJMJRtq-FBD18', password='pass', user_agent='testscript by /u/fakebot3', username='Doodleman360_')
         r = praw.Reddit(client_id='W0qqIJPsyqrKbA', client_secret='D8KHLMo62Nu8Q1wJMJRtq-FBD18', user_agent='testscript by /u/Doodleman360_')
-        for submission in r.subreddit(format_msg).top("all",limit=100):
-            if "i.imgur.com/" in submission.url or "gfycat.com/" in submission.url:
-                await self.bot.say(submission.url)
+        try:
+            for submission in r.subreddit(format_msg).top("all",limit=100):
+                if "i.imgur.com/" in submission.url or "gfycat.com/" in submission.url:
+                    await self.bot.say(submission.url)
+        except:
+            await self.bot.say("subreddit does not exist :P")
 
 
 def setup(bot):
